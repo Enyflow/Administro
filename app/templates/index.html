@@ -2,91 +2,21 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px;
-}
-
-#myVideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-}
-
-.content {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 5px;
-	
-}
-
-.bottom {
-	position: fixed;
-	bottom:0;
-	text-align: center;
-  align:center;
-  margin:0 auto;
-	width: 100%;
-
-}
-
-.top {
-  position: fixed;
-  top: 0;
-  color: #f1f1f1;
-  width: 33%;
-  padding: 6px;
-  text-align: center;
-  align:center;
-  margin:0 auto;
-  left:36%;
-  font-size:1 px
-	
-}
-
-#myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #04AA6D;
-  color: white;
-  cursor: pointer;
-}
-
-#myBtn:hover {
-  background: #ddd;
-  color: black;
- 
-
- 
-}
-</style>
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" type="text/css" media="all" />
 
 </head>
 <body>
 
 <video autoplay muted loop id="myVideo">
-  <source src="video.mp4" type="video/mp4">
+  <source src="{{url_for('static',filename=img/video.mp4')}}" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 <div class="top">
-<div><img src="titolo.png" title="Administro" /></div>
+<div><img src="{{url_for('static',filename=img/titolo.png')}}" title="Administro" /></div>
 <i color="#f4f4f4"> A revolutionary way to manage a business </i>
 </div>
 <div class="bottom">
-<a href="homepage.html"><div><img src="logo.png" title="Run" height=440px width=520px/></div></a>
+<a href="homepage.html"><div><img src="{{url_for('static',filename=img/logo.png')}}" title="Run" height=440px width=520px/></div></a>
 </div>
 
 
