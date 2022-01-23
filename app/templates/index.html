@@ -1,61 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>ADMINISTRO</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 5px;
+	
+}
+
+.bottom {
+	position: fixed;
+	bottom:0;
+	text-align: center;
+  align:center;
+  margin:0 auto;
+	width: 100%;
+
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  color: #f1f1f1;
+  width: 33%;
+  padding: 6px;
+  text-align: center;
+  align:center;
+  margin:0 auto;
+  left:36%;
+  font-size:1 px
+	
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+ 
+
+ 
+}
+</style>
+
 </head>
 <body>
-	<div class="container">
-        <div id="top">
-			<h1>ADMINISTRO</h1>
-			<p>Accedi alla tua azienda tramite le credenziali</p>
-		</div>
-		<div class="scroller">
-			
-			<table class="tablem" style="float: Left;">
-            <tbody>
-            <img class="flex" src="{{ url_for('static', filename='img/logo.jpg' ) }}" title="ADMINISTRO" style="float:left;margin: 10px" /> 
-            </tbody>
-            </table>
-			
-			<table class="tabledx" style="float: right;">
-            <tbody>
-			<h1><font color="#04AA6D">EFFETTUA IL LOGIN</h1>
-            </tbody>
-            </table>
-			<h1>Please login</h1>
-      <br>
-     
-			
-			<form id="login" method="post" action="login">
-            <table class="tabledxg" style="float">
-		
-            <tr>
-            <td class="hidden"><font color="#04AA6D"> <label for="username">Username</label> </td>
-            <td class="hidden"><font color="#04AA6D"> <input type="text" id="username" name="username" class="input_a" /></td>
-            </tr>
-			<tr class="hidden">
-            <td class="hidden"><font color="#04AA6D"> <label for="password">PASSWORD </label> </td>
-            <td class="hidden"><font color="#04AA6D"> <input type="password" id="password" name="password" class="input_a" /></td>
-            </tr>
-			<tr class="hidden">
-			<td><button type="submit" form="login" class="button2">Login</button></td>
-			</tr>
-            </table>
-			</form> 
 
-		</div>
-		
-			
-		<div class="footer">
-			
-           
-			<p>ADMINISTRO - Melloni Marco</p>
-			<p>+39 3317037549 - marcomelloni01@gmail.com</p>
-			<p>Via Giovanni Pascoli 2/2 Montale Rangone</p>
-            
-		</div>
-	</div>
+<video autoplay muted loop id="myVideo">
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<div class="top">
+<div><img src="titolo.png" title="Administro" /></div>
+<i color="#f4f4f4"> A revolutionary way to manage a business </i>
+</div>
+<div class="bottom">
+<a href="homepage.html"><div><img src="logo.png" title="Run" height=440px width=520px/></div></a>
+</div>
+
+
 </body>
 </html>
