@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Responsive Navbar | CodingNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<style>
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+nav{
+  background: #f1f1f1;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #04AA6D;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(sfondo.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+};
+
+.text{
+  position: absolute;
+  bottom: 50% ;
+  top:50% ;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 5px;
+  };
+  
+h3 {
+  margin: 0px;
+  background-image: url('sfondo.jpg');
+  background-repeat: no-repeat;
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, 0.5);
+  font-weight: normal;
+  text-align: center;
+  width: 50%;
+}
+
+</style>
+
+</head>
+<body>
+<nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo"><img src="titolo.png" title="Administro" /></label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+	<section id="module">
+		<div class="content">
+			<h1>Dubbi?</h1>
+			<h3>Richiedi informazioni compilando il modulo!<br>Ti contatteremo il prima possibile</h3>
+			
+			<form action="dati.php" method="post">
+				<ul>
+					<li class="uno">
+						<label for="nome">Nome</label>
+						<input type="text" name="nome" id="nome" class="testo" required>
+					</li>
+					<li class="due">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" class="testo" required>
+					</li>
+					<li class="tre">
+						<label for="testo">Messaggio</label>
+						<textarea name="testo" id="testo"></textarea>
+					</li>
+					<li class="quattro">
+						<input type="submit" value="Contact us" class="pulsante">
+					</li>
+				</ul>
+			</form>
+		</div>
+	</section>
