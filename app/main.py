@@ -31,7 +31,7 @@ def login():
 def menu():
     return render_template('menu.html')
 
-@app.route('/login_',methods=['POST'])
+@app.route('/login',methods=['POST'])
 def login_():
     username = request.form["username"]
     password = request.form["password"]
