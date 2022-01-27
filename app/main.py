@@ -31,8 +31,8 @@ def login():
 def menu():
     return render_template('menu.html')
 
-@app.route('/login',methods=['POST'])
-def login():
+@app.route('/login_',methods=['POST'])
+def login_():
     username = request.form["username"]
     password = request.form["password"]
     connection = psycopg2.connect(url)
