@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CONTROLLO GESTIONE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all" />
+</head>
+<body>
+	<div class="container">
+        <div id="top">
+			
+			<a href="menu">
+			<img src="{{ url_for('static', filename='img/logo.jpg' ) }}" title="Torna al Menù" style="float:left;margin: 10px"  height=80px width=80px/> 
+			</a>
+			<h1>Accedi ad ogni sezione della tua azienda con un semplice CLIC!</h1>
+			<p>Benvenuto in ADMINISTRO!</p>
+			
+		</div>
+		<div class="scroller">
+		<div class="menu">
+		
+
+		<a href="personale"><button type="button" class="button2">GESTISCI PERSONALE</button></a>
+		<a href="introiti"><button type="button" class="button2">INTROITI VENDITE</button></a>
+		<a href="acquisti"><button type="button" class="button2">ACQUISTI</button></a>
+		<a href="cpp"><button type="button" class="button2">CASSA</button></a>
+		<a href="cob"><button type="button" class="button2">CORE BUSINNES</button></a>
+		<a href="imp"><button type="button" class="button2">IMPOSTA SUL REDDITO</button></a>
+		<a href="comm"><button type="button" class="button2">AREA VENDITE</button></a>
+		<a href="ordinidaricevere"><button type="button" class="button2">GESTIONE CREDITI</button></a>
+		<a href="paginawebb"><button type="button" class="button2">PAGINA WEB</button></a>
+		<a href="statistiche"><button type="button" class="button2">STATISTICHE</button></a>
+		</div>
+		</div>
+		<div class="footer">
+		<a href="login"><button type="button" class="button3">LOGOUT</button></a>
+		<p>
+		ADMINISTRO -  Melloni Marco
+		</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ADMINISTRO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" media="all" />
+</head>
+<body>
+	<div class="container">
+        <div id="top">
+			<h1>ADMINISTRO</h1>
+			<p>Accedi alla tua azienda tramite le credenziali</p>
+		</div>
+		<div class="scroller">
+			
+			<table class="tablem" style="float: Left;">
+            <tbody>
+            <img class="flex" src="{{ url_for('static', filename='img/logo.jpg' ) }}" title="ADMINISTRO" style="float:left;margin: 10px" /> 
+            </tbody>
+            </table>
+			
+			<table class="tabledx" style="float: right;">
+            <tbody>
+			<h1><font color="#04AA6D">EFFETTUA IL LOGIN</h1>
+            </tbody>
+            </table>
+			<h1>Please login</h1>
+      <br>
+     
+			
+			<form id="login_" method="post" action="login_">
+            <table class="tabledxg" style="float">
+		
+            <tr>
+            <td class="hidden"><font color="#04AA6D"> <label for="username">Username</label> </td>
+            <td class="hidden"><font color="#04AA6D"> <input type="text" id="username" name="username" class="input_a" /></td>
+            </tr>
+			<tr class="hidden">
+            <td class="hidden"><font color="#04AA6D"> <label for="password">PASSWORD </label> </td>
+            <td class="hidden"><font color="#04AA6D"> <input type="password" id="password" name="password" class="input_a" /></td>
+            </tr>
+			<tr class="hidden">
+			<td><button type="submit" form="login_" class="button2">Login</button></td>
+			</tr>
+            </table>
+			</form> 
+
+		</div>
+		
+			
+		<div class="footer">
+			
+           
+			<p>ADMINISTRO - Melloni Marco</p>
+			<p>+39 3317037549 - marcomelloni01@gmail.com</p>
+			<p>Via Giovanni Pascoli 2/2 Montale Rangone</p>
+            
+		</div>
+	</div>
+</body>
+</html>
