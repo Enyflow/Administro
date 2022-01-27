@@ -31,8 +31,8 @@ def login():
 def menu():
     return render_template('menu.html')
 
-@app.route('/login',methods=['POST'])
-def login():
+@app.route('/login_',methods=['POST'])
+def login_():
     username = request.form["username"]
     password = request.form["password"]
     connection = psycopg2.connect(url)
@@ -50,7 +50,7 @@ def login():
     if password == r[0]["passwordc"]:
         return render_template("menu.html")
     else:
-        return render_template("login.html")
+        return render_template("paginaweb.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='8000', debug=True)
