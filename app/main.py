@@ -47,7 +47,7 @@ def login_():
     connection.commit()
     cursor.close()
     connection.close()
-    if password == "administro":
+    if password == 'administro':
         return render_template("menu.html")
     else:
         return render_template("login.html")
