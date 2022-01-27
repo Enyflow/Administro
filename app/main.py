@@ -49,7 +49,7 @@ def login_():
     connection.close()
     if password == 'administro':
         return render_template("menu.html")
-    else:
+    if password != 'administro':
         return render_template("login.html")
 
 if __name__ == '__main__':
